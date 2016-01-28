@@ -9,14 +9,16 @@ package lab2b_team8;
  *
  * @author Graham
  */
-public class Account {
+public abstract class Account {
     private int accountNumber;
     private double balance;
     
+    /*
     public Account(int theAccountNumber, double setBalance){
         this.accountNumber = theAccountNumber;
         this.balance = setBalance;
     }
+    */
 
     /**
      * @return the accountNumber
@@ -44,6 +46,19 @@ public class Account {
      */
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+    
+    public void makeDeposit(double depositAmmount){
+        this.balance = this.balance + depositAmmount;
+    }
+    
+    public void makeWithdrawl(double withdrawlAmmount){
+        if(this.balance - withdrawlAmmount >= 0)
+        {
+            this.balance = this.balance - withdrawlAmmount;
+        }else{
+            System.out.println("Insufficent funds!!!!!!!!!!!!!!");
+        }
     }
     
 }
