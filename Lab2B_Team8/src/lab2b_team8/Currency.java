@@ -10,5 +10,17 @@ package lab2b_team8;
  * @author Graham
  */
 public class Currency {
-    
+  private String currencyType;
+  
+  public Currency(String currencyType){
+      this.currencyType= currencyType;
+  }
+  
+  public void vendBills(double amount){
+      System.out.println("Vending: $"+amount);
+  }
+  
+  public void acceptBills (double amount){
+      System.out.println("Accepted: $"+amount+" for deposit");
+  }
 }
