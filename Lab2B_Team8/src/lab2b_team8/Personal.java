@@ -10,40 +10,26 @@ package lab2b_team8;
  * @author Graham
  */
 public class Personal extends Customer{
-   private String firstName;
-   private String lastName;
+   private String Name;
    
-   public Personal(String newFirstName, String newLastName){
-       this.firstName = newFirstName;
-       this.lastName = newLastName;
+   public Personal(int accountNumber, String add, String newFirstName){
+       super.setAccountNumber(accountNumber);
+       super.setAddress(add);
+       this.Name = newFirstName;
        //implement code to set the accountNumber and address
    }
 
     /**
      * @return the firstName
      */
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return Name;
     }
 
     /**
      * @param firstName the firstName to set
      */
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    /**
-     * @return the lastName
-     */
-    public String getLastName() {
-        return lastName;
-    }
-
-    /**
-     * @param lastName the lastName to set
-     */
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String n) {
+        this.Name = n;
     }
 }
