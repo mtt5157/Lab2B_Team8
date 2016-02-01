@@ -47,12 +47,30 @@ public class ATM {
         
     }
     
-     public double calculateTotalWithdrawl(double withDrawl){
-        double totalWithdrawl = 0.0;
-        
-        //we need to do something here 
-        
-        return totalWithdrawl;
+     public void Withdrawl(double withdrawl, int accountNumber, String accountType){
+        if(accountType.equalsIgnoreCase("savings")){
+            for(int i =0; i<Bank1.getSavingsList().size(); i++){
+                if(Bank1.getSavingsList().get(i).getAccountNumber()==accountNumber){
+                    currency1.vendBills(withdrawl);
+                    Bank1.getSavingsList().get(i).makeWithdrawl(withdrawl);  
+                }
+                else{
+                    System.out.println("You did not enter a valid account number");
+                }
+            }
+        }
+        else if(accountType.equalsIgnoreCase("checking")){
+            for(int i =0; i<Bank1.getCheckingList().size(); i++){
+                if(Bank1.getCheckingList().get(i).getAccountNumber()==accountNumber){
+                    currency1.vendBills(withdrawl);
+                    Bank1.getCheckingList().get(i).makeWithdrawl(withdrawl);
+                }
+                else{
+                    System.out.println("You did not enter a valid account number");
+                }
+            }
+        }
+      
     }
     
 }
