@@ -23,4 +23,12 @@ public class Currency {
   public void acceptBills (double amount){
       System.out.println("Accepted: $"+amount+" for deposit");
   }
+  
+  public void setCurrencyType(String type){
+      this.currencyType = type;
+  }
+  
+  public String getCurrencyType(){
+      return this.currencyType;
+  }
 }
