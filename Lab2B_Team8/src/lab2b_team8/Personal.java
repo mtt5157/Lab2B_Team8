@@ -5,31 +5,46 @@
  */
 package lab2b_team8;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Graham
  */
 public class Personal extends Customer{
-   private String Name;
+   private String name;
    
    public Personal(int accountNumber, String add, String newFirstName){
        super.setAccountNumber(accountNumber);
        super.setAddress(add);
-       this.Name = newFirstName;
+       ArrayList<Checking> theCheckingList = new ArrayList<Checking>();
+       ArrayList<Savings> theSavingsList = new ArrayList<Savings>();
+       super.setCheckingList(theCheckingList);
+       super.setSavingsList(theSavingsList);
+       this.name = newFirstName;
        //implement code to set the accountNumber and address
    }
+   
+   public void addCheckingAccount(Checking checkingAccountToAdd){
+       super.getCheckingList().add(checkingAccountToAdd);
+       
+   }
+   
+   public void addSavingsAccount(Savings savingsAccountToAdd){
+       super.getSavingsList().add(savingsAccountToAdd);
+       
+   }
+   
 
     /**
      * @return the firstName
      */
     public String getName() {
-        return Name;
+        return name;
     }
 
-    /**
-     * @param firstName the firstName to set
-     */
+    
     public void setName(String n) {
-        this.Name = n;
+        this.name = n;
     }
 }
