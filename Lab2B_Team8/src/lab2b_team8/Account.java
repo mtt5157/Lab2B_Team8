@@ -7,19 +7,11 @@ package lab2b_team8;
 
 /**
  *
- * @author Graham
+ * @author Zack
  */
 public abstract class Account {
     private int accountNumber;
     private double balance;
-    
-    /*
-    public Account(int theAccountNumber, double setBalance){
-        this.accountNumber = theAccountNumber;
-        this.balance = setBalance;
-    }
-    */
-
     /**
      * @return the accountNumber
      */
@@ -39,13 +31,6 @@ public abstract class Account {
      */
     public double getBalance() {
         return balance;
-    }
-
-    /**
-     * @param balance the balance to set
-     */
-    public void setBalance(double balance) {
-        this.balance = balance;
     }
     
     public void makeDeposit(double depositAmmount){

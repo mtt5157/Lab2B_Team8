@@ -12,15 +12,14 @@ import java.util.ArrayList;
  * @author Graham
  */
 public class Checking extends Account{
-    private ArrayList<Check> checkBook;
+   
     
     public Checking(int accountNum, double initialBalance){
-        super.setAccountNumber(accountNum);
-        super.setBalance(initialBalance);
-        checkBook = new ArrayList<Check>();
+        super.makeDeposit(initialBalance);
+       super.setAccountNumber(accountNum);
+        
     }
     
-    //implement stuff for checks
     
     
 }
