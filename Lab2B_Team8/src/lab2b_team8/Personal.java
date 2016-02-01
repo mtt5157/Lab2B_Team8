@@ -17,23 +17,11 @@ public class Personal extends Customer{
    public Personal(int accountNumber, String add, String newFirstName){
        super.setAccountNumber(accountNumber);
        super.setAddress(add);
-       ArrayList<Checking> theCheckingList = new ArrayList<Checking>();
-       ArrayList<Savings> theSavingsList = new ArrayList<Savings>();
-       super.setCheckingList(theCheckingList);
-       super.setSavingsList(theSavingsList);
        this.name = newFirstName;
        //implement code to set the accountNumber and address
    }
    
-   public void addCheckingAccount(Checking checkingAccountToAdd){
-       super.getCheckingList().add(checkingAccountToAdd);
-       
-   }
    
-   public void addSavingsAccount(Savings savingsAccountToAdd){
-       super.getSavingsList().add(savingsAccountToAdd);
-       
-   }
    
 
     /**

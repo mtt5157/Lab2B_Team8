@@ -5,6 +5,8 @@
  */
 package lab2b_team8;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Graham
@@ -14,13 +16,14 @@ public class Check {
     private int checkNumber;
     private double checkAmmount;
     private String checkRecipient;
+    private Checking CheckAccount;
     
-    public Check(int newAccountNumber, int theCheckNumber, double theCheckAmmount, String theCheckRecipient){
+    public Check(int newAccountNumber, int theCheckNumber, double theCheckAmmount, String theCheckRecipient, Checking CheckAccount){
         this.accountNumber = newAccountNumber;
         this.checkNumber = theCheckNumber;
         this.checkAmmount = theCheckAmmount;
         this.checkRecipient = theCheckRecipient;
-        
+        this.CheckAccount = CheckAccount;
     }
 
     /**
@@ -77,5 +80,10 @@ public class Check {
      */
     public void setCheckRecipient(String checkRecipient) {
         this.checkRecipient = checkRecipient;
+    }
+    
+    public void checkWithdrawl(double amount){
+       CheckAccount.makeWithdrawl(amount);
+      
     }
 }

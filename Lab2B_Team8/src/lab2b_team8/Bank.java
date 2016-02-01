@@ -15,11 +15,15 @@ public class Bank {
     private String bankName;
     private String bankLocation;
     private ArrayList<Customer> customerList;
+    private ArrayList<Checking> checkingList;
+    private ArrayList<Savings> savingsList;
     
     public Bank(String newBankName, String bankAddress){
         this.bankName = newBankName;
         this.bankLocation = bankAddress;
         this.customerList = new ArrayList<Customer>();
+        this.checkingList = new ArrayList<Checking>();
+        this.savingsList = new ArrayList<Savings>();
     }
 
     /**
@@ -67,4 +71,38 @@ public class Bank {
     public void addCustomer(Customer customerToAdd){
         this.customerList.add(customerToAdd);
     }
+    
+     public ArrayList<Checking> getCheckingList() {
+        return checkingList;
+    }
+
+    /**
+     * @param checkingList the checkingList to set
+     */
+    public void setCheckingList(ArrayList<Checking> checkingList) {
+        this.checkingList = checkingList;
+    }
+
+    /**
+     * @return the savingsList
+     */
+    public ArrayList<Savings> getSavingsList() {
+        return savingsList;
+    }
+
+    /**
+     * @param savingsList the savingsList to set
+     */
+    public void setSavingsList(ArrayList<Savings> savingsList) {
+        this.savingsList = savingsList;
+    }
+    public void addCheckingAccount(Checking checkingAccountToAdd){
+       getCheckingList().add(checkingAccountToAdd);
+       
+   }
+   
+   public void addSavingsAccount(Savings savingsAccountToAdd){
+       getSavingsList().add(savingsAccountToAdd);
+       
+   }
 }
