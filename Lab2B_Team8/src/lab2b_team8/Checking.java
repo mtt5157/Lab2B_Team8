@@ -15,7 +15,7 @@ public class Checking extends Account{
    
     
     public Checking(int accountNum, double initialBalance){
-        super.makeDeposit(initialBalance);
+       super.makeDeposit(initialBalance);
        super.setAccountNumber(accountNum);
         
     }

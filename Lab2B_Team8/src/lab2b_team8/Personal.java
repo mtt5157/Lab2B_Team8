@@ -14,9 +14,9 @@ import java.util.ArrayList;
 public class Personal extends Customer{
    private String name;
    
-   public Personal(int accountNumber, String add, String newFirstName){
+   public Personal(int accountNumber, String address, String newFirstName){
        super.setAccountNumber(accountNumber);
-       super.setAddress(add);
+       super.setAddress(address);
        this.name = newFirstName;
        //implement code to set the accountNumber and address
    }

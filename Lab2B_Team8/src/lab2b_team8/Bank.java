@@ -18,12 +18,12 @@ public class Bank {
     private ArrayList<Checking> checkingList;
     private ArrayList<Savings> savingsList;
     
-    public Bank(String newBankName, String bankAddress){
+    public Bank(String newBankName, String bankAddress, ArrayList<Customer> custList, ArrayList<Checking> checkList, ArrayList<Savings> saveList){
         this.bankName = newBankName;
         this.bankLocation = bankAddress;
-        this.customerList = new ArrayList<Customer>();
-        this.checkingList = new ArrayList<Checking>();
-        this.savingsList = new ArrayList<Savings>();
+        this.customerList = custList;
+        this.checkingList = checkList;
+        this.savingsList =saveList;
     }
 
     /**
