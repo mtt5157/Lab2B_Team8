@@ -38,6 +38,7 @@ public class Lab2B_Team8 {
              int accountNum = in.nextInt();
              System.out.println("Enter address:");
              String address = in.nextLine();
+             in.nextLine();
              customers.add(new Personal(accountNum, address, name));
              System.out.println("Enter 1 for checking account");
              System.out.println("Enter 2 for savings account");
@@ -58,6 +59,7 @@ public class Lab2B_Team8 {
              int accountNum = in.nextInt();
              System.out.println("Enter address:");
              String address = in.nextLine();
+             in.nextLine();
              customers.add(new Commercial(accountNum, address, companyName));
              System.out.println("Enter 1 for checking account");
              System.out.println("Enter 2 for savings account");
@@ -67,11 +69,76 @@ public class Lab2B_Team8 {
              }
              else if(accountType == 2){
                  savings.add(new Savings(accountNum, 0.0));
-             } 
+             }
+             
+         }
+      }
+         else if (inputChoice == 2){
+             System.out.print("Please enter your account number: ");
+             int requestNumber = in.nextInt();
+             for(int i = 0; i < checking.size(); i++){
+                 if(requestNumber == checking.get(i).getAccountNumber()){
+                     System.out.println("Would you like to: ");
+                     System.out.println("0- Make a deposit");
+                     System.out.println("1- Make a withdrawal");
+                     int depositWithdrawalChoice = in.nextInt();
+                     if(depositWithdrawalChoice == 0){
+                        double accountBalance = checking.get(i).getBalance();
+                        System.out.println("Current Balance: $" + accountBalance);
+                        System.out.print("Please enter the ammount you would like to deposit: $");
+                        double depositAmmount = in.nextDouble();
+                        
+                        checking.get(i).makeDeposit(depositAmmount);
+                        
+                     }
+                     else if(depositWithdrawalChoice == 1){
+                        double accountBalance = checking.get(i).getBalance();
+                        System.out.println("Current Balance: $" + accountBalance);
+                        System.out.print("Please enter the ammount you would like to withdrawal: $");
+                        double withdrawalAmmount = in.nextDouble();
+                        checking.get(i).makeWithdrawal(withdrawalAmmount);
+                         
+                     }
+                     
+                   
+                 }
+                 else if(requestNumber == savings.get(i).getAccountNumber()){
+                     System.out.println("Would you like to: ");
+                     System.out.println("0- Make a deposit");
+                     System.out.println("1- Make a withdrawl");
+                     int depositWithdwarlChoice = in.nextInt();
+                     if(depositWithdwarlChoice == 0){
+                        double accountBalance = savings.get(i).getBalance();
+                        System.out.println("Current Balance: $" + accountBalance);
+                        System.out.print("Please enter the ammount you would like to deposit: $");
+                        double depositAmmount = in.nextDouble();
+                        savings.get(i).makeDeposit(depositAmmount);
+                        
+                         
+                     }
+                     else if(depositWithdwarlChoice == 1){
+                        double accountBalance = savings.get(i).getBalance();
+                        System.out.println("Current Balance: $" + accountBalance);
+                        System.out.print("Please enter the ammount you would like to withdrawal: $");
+                        double withdrawalAmmount = in.nextDouble();
+                        savings.get(i).makeWithdrawal(withdrawalAmmount);
+                         
+                     }
+                     
+                   
+                 }
+                 else {
+                     System.out.println("Invalid account number!");
+                 }
+             }
+             
+             
+             
+             
          }
         }
      }
      
     }
     
-}
+

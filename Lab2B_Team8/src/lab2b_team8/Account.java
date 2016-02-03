@@ -44,10 +44,10 @@ public abstract class Account {
         System.out.println("Your current balance is: " + this.balance);
     }
     
-    public void makeWithdrawl(double withdrawlAmmount){
-        if(this.balance - withdrawlAmmount >= 0)
+    public void makeWithdrawal(double withdrawalAmmount){
+        if(this.balance - withdrawalAmmount >= 0)
         {
-            this.balance = this.balance - withdrawlAmmount;
+            this.balance = this.balance - withdrawalAmmount;
             System.out.println("Your current balance is: " + this.balance);
         }else{
             System.out.println("Insufficent funds!");

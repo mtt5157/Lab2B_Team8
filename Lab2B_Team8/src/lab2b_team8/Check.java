@@ -83,7 +83,7 @@ public class Check {
     }
     
     public void checkWithdrawl(double amount){
-       CheckAccount.makeWithdrawl(amount);
+       CheckAccount.makeWithdrawal(amount);
       System.out.println(amount+" was withdrawn from"+CheckAccount.getAccountNumber()+" and will be transferred to "+ this.checkRecipient);
     }
 }

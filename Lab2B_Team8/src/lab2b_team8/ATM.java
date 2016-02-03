@@ -52,7 +52,7 @@ public class ATM {
             for(int i =0; i<Bank1.getSavingsList().size(); i++){
                 if(Bank1.getSavingsList().get(i).getAccountNumber()==accountNumber){
                     currency1.vendBills(withdrawl);
-                    Bank1.getSavingsList().get(i).makeWithdrawl(withdrawl);  
+                    Bank1.getSavingsList().get(i).makeWithdrawal(withdrawl);  
                 }
                 else{
                     System.out.println("You did not enter a valid account number");
@@ -63,7 +63,7 @@ public class ATM {
             for(int i =0; i<Bank1.getCheckingList().size(); i++){
                 if(Bank1.getCheckingList().get(i).getAccountNumber()==accountNumber){
                     currency1.vendBills(withdrawl);
-                    Bank1.getCheckingList().get(i).makeWithdrawl(withdrawl);
+                    Bank1.getCheckingList().get(i).makeWithdrawal(withdrawl);
                 }
                 else{
                     System.out.println("You did not enter a valid account number");
