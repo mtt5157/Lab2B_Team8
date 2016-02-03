@@ -12,6 +12,12 @@ package lab2b_team8;
 public abstract class Account {
     private int accountNumber;
     private double balance;
+    
+    
+    public Account(int accountNum, double balance){
+        this.accountNumber = accountNum;
+        this.balance = balance;
+    }
     /**
      * @return the accountNumber
      */

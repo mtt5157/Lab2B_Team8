@@ -11,8 +11,8 @@ package lab2b_team8;
  */
 public class Savings extends Account{
     public Savings(int accountNum, double initialBalance){
-        super.setAccountNumber(accountNum);
-        super.makeDeposit(initialBalance);
+        super(accountNum, initialBalance);
+        
     }
     
 }

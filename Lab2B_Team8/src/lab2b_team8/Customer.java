@@ -15,14 +15,13 @@ public abstract class Customer {
     private int accountNumber;
     private String address;
     
-    //I think we should have Customer be an abstract class but I put this in here in case we decide otherwise.
-    /*
+    
     public Customer(int newAccountNumber, String customerAddress){
         this.accountNumber = newAccountNumber;
         this.address = customerAddress;
              
     }
-    */ 
+     
 
     /**
      * @return the accountNumber

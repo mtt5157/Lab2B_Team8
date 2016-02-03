@@ -15,21 +15,18 @@ public class Commercial extends Customer{
     private String companyName;
     
     public Commercial(int accountNumber, String add, String newCompanyName){
-        super.setAccountNumber(accountNumber);
-        super.setAddress(add);
-        
+        super(accountNumber, add);
         this.companyName = newCompanyName;
         //implement code to set the accountNumber and address
     }
     
     
-    
-    
     public String getCompanyName() {
-        return companyName;
+        return this.companyName;
     }
     
     public void setCompanyName(String company) {
-        companyName = company;
+        this.companyName = company;
     }
+    
 }
