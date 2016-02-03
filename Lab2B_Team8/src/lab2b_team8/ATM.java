@@ -14,9 +14,9 @@ public class ATM {
     private Bank Bank1;
     private Currency currency1;
     
-    public ATM(Bank Bank1, Currency currency1){
+    public ATM(Bank Bank1){
         this.Bank1 = Bank1;
-        this.currency1 = currency1;
+        this.currency1 = new Currency("USD");
         this.date = "1/1/11";
     }
     

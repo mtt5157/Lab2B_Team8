@@ -135,6 +135,54 @@ public class Lab2B_Team8 {
              
              
              
+         } else {
+             System.out.println("Enter your account number:");
+             int accNumber = in.nextInt();
+             System.out.println("1 - Checking");
+             System.out.println("2 - Savings");
+             int accChoice = in.nextInt();
+             if (accChoice == 1) {
+                for (int i = 0; i < checking.size(); i++) {
+                    if (accNumber == checking.get(i).getAccountNumber()) {
+                       System.out.println("Select the action from the ATM:");
+                       System.out.println("1 - Get Cash");
+                       System.out.println("2 - Deposit Cash");
+                       int atmSelection = in.nextInt();
+                       if (atmSelection == 1) {
+                           System.out.println("Current Balance: $" + checking.get(i).getBalance());
+                           System.out.println("Enter the amount of cash you'd like to withdraw: ");
+                           double amount = in.nextDouble();
+                           bank1.getAtm().Withdrawl(amount, accNumber, "checking");
+                       } else {
+                           System.out.println("Current Balance: $" + checking.get(i).getBalance());
+                           System.out.println("Enter the amount of cash you'd like to deposit: ");
+                           double amount = in.nextDouble();
+                           bank1.getAtm().Deposit(amount, accNumber, "checking");
+                       }
+                    }
+                }
+             } else if (accChoice == 2) {
+                for (int i = 0; i < savings.size(); i++) {
+                    if (accNumber == savings.get(i).getAccountNumber()) {
+                       System.out.println("Select the action from the ATM:");
+                       System.out.println("1 - Get Cash");
+                       System.out.println("2 - Deposit Cash");
+                       int atmSelection = in.nextInt();
+                       if (atmSelection == 1) {
+                           System.out.println("Current Balance: $" + savings.get(i).getBalance());
+                           System.out.println("Enter the amount of cash you'd like to withdraw: ");
+                           double amount = in.nextDouble();
+                           bank1.getAtm().Withdrawl(amount, accNumber, "savings");
+                       } else {
+                           System.out.println("Current Balance: $" + savings.get(i).getBalance());
+                           System.out.println("Enter the amount of cash you'd like to deposit: ");
+                           double amount = in.nextDouble();
+                           bank1.getAtm().Deposit(amount, accNumber, "savings");
+                       }
+                    }
+                }
+             }
+
          }
         }
      }

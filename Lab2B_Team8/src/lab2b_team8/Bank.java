@@ -17,6 +17,7 @@ public class Bank {
     private ArrayList<Customer> customerList;
     private ArrayList<Checking> checkingList;
     private ArrayList<Savings> savingsList;
+    private ATM atm;
     
     public Bank(String newBankName, String bankAddress, ArrayList<Customer> custList, ArrayList<Checking> checkList, ArrayList<Savings> saveList){
         this.bankName = newBankName;
@@ -24,6 +25,7 @@ public class Bank {
         this.customerList = custList;
         this.checkingList = checkList;
         this.savingsList =saveList;
+        this.atm = new ATM(this);
     }
 
     /**
@@ -105,4 +107,18 @@ public class Bank {
        getSavingsList().add(savingsAccountToAdd);
        
    }
+
+    /**
+     * @return the atm
+     */
+    public ATM getAtm() {
+        return atm;
+    }
+
+    /**
+     * @param atm the atm to set
+     */
+    public void setAtm(ATM atm) {
+        this.atm = atm;
+    }
 }
